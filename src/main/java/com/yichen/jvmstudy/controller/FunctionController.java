@@ -14,7 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class FunctionController {
 
 
-
+    /**
+     * 主要逻辑，通过 调用  refresh() 方法刷新
+     * 参考  =>   https://stackoverflow.com/questions/39386168/programmatically-restart-spring-boot-application-refresh-spring-context
+     */
     @RequestMapping("/reRun")
     public void reRun(){
         Thread restartThread = new Thread(() -> {
